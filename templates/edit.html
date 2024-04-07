@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Edit
+{% endblock %}
+
+{% block main %}
+    <br>
+    <img src="{{ url_for('static', filename=imgpath)}}" style="max-width: 60%">
+    <br>
+    <br>
+    <form action="/edit" method="POST">
+        <button type="submit" name="original" value="original" class="btn btn-warning">Original</button>
+        <button type="submit" name="enhance" value="enhance" class="btn btn-primary">Enhance</button>
+        <button type="submit" name="color" value="color" class="btn btn-primary">Color</button>
+        <button type="submit" name="contrast" value="contrast" class="btn btn-primary">Contrast</button>
+        <button type="submit" name="brightness" value="brightness" class="btn btn-primary">Brightness</button>
+        <br>
+        <br>
+        <button type="submit" name="blur" value="blur" class="btn btn-primary">Blur</button>
+        <button type="submit" name="details" value="details" class="btn btn-primary">Details</button>
+        <button type="submit" name="sharpen" value="sharpen" class="btn btn-primary">Sharpen</button>
+        <button type="submit" name="smooth" value="smooth" class="btn btn-primary">Smooth</button>
+        <br>
+        <br>
+        <button type="submit" name="download" value="download" class="btn btn-dark">Download</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Refill
+{% endblock %}
+
+{% block main %}
+    <h3>Refill tokens</h3>
+    <h5>You have {{ usertokens }} tokens</h5>
+    <p>Select how many additional tokens you want to purchase:</p>
+    <img src="/static/download.jpg">
+    <br>
+    <br>
+    <form action="/refill" method="post">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary active">
+              <input type="radio" name="option" id="15" value="15" autocomplete="off" checked> 15
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="option" id="25" value="25" autocomplete="off"> 25
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="option" id="30" value="50" autocomplete="off"> 50
+            </label>
+          </div>
+          <div class="d-flex justify-content-center">
+            <table>
+                <tr>
+                    <td>
+                        <div>
+                            <div class="form-group">
+                                <label for="inputcard">Card number</label>
+                                <input type="number" class="form-control" id="inputcard" name="inputcard" placeholder="0000 0000 0000 0000" autocomplete="off">
+                              </div>
+                              <br>
+                              <div class="form-row d-flex justify-content-center">
+                                <div class="form-group">
+                                  <label for="inputname">Name on card</label>
+                                  <input type="text" class="form-control" id="inputname" name="inputname" placeholder="John Appleseed" autocomplete="off">
+                                </div>
+                                <div class="form-group col-md-2">
+                                  <label for="expmonth">Expiration month</label>
+                                  <input type="number" class="form-control" id="expmonth" name="expmonth" placeholder="00/XX" autocomplete="off">
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="expyear">Expiration year</label>
+                                    <input type="number" class="form-control" id="expyear" name="expyear" placeholder="XX/00" autocomplete="off">
+                                  </div>
+                                <div class="form-group col-md-2">
+                                  <label for="inputcvv">CVV/CVC</label>
+                                  <input type="number" class="form-control" id="inputcvv" name="inputcvv" placeholder="123" autocomplete="off">
+                                </div>
+                              </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+          </div>
+          <br>
+          <br>
+          <p>***Please don't input actual card information, this is for testing purposes only.</p>
+        <button type="submit" class="btn btn-primary">Buy Now</button>
+    </form>
+{% endblock %}

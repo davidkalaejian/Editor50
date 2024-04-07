@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <h3>Welcome to Journey50 Photo Editor!</h3>
+    <img src="/static/Banner.jpg">
+    <br>
+    <br>
+    <h5>You have {{ usertokens }} tokens</h5>
+    <p>Each time you upload a photo to edit you use 1 token.</p>
+    <form action="/upload" method="get">
+        <button type="submit" class="btn btn-primary">Upload photo</button>
+    </form>
+    <br>
+    <p>You can also purchase additional tokens by clicking on the button below.</p>
+    <form action="/refill" method="get">
+        <button type="submit" class="btn btn-primary">Refill tokens</button>
+    </form>
+{% endblock %}
