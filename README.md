@@ -1,5 +1,12 @@
 # Journey50
 #### Video Demo:  <URL https://youtu.be/uwVgiOAkZSs>
+
+#### Local usage: 
+In your terminal window run:
+```
+flask run
+```
+
 #### Description:
 # Journey50 Photo editor
 I have created a very simple photo editing app where you can apply different tools and filters to your photos, like sharpness, blur, brightness, etc. You can access the editor only by logging in, each user receives 15 tokens upon registration, each successfully uploaded image then costs 1 token to edit, you can also purchase additional tokens to refill your balance, all of which is kept in an SQL data base for storage.
