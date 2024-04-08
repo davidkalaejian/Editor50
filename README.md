@@ -1,5 +1,4 @@
 # Journey50
-#### Video Demo:  <URL https://youtu.be/uwVgiOAkZSs>
 
 #### Local usage: 
 In your terminal window run:
