@@ -19,8 +19,7 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 FILENAME = ""
 
 # Configure application
-template_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "docs"))
-app = Flask(__name__, template_folder=template_dir)
+app = Flask(__name__)
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
